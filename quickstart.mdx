@@ -7,40 +7,80 @@ description: "In this section you will begin to setup your device."
 
 Before you begin, you must have:
 
-- Requirement one (for example, Node.js 18\+, a free account, an API key)
+- VsCode
 - Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
 
 ## Get started
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Install Pygame">
+    Pygame is an essential library that I use often for my projects. It is great because it allows keybinds and intuitive window creating. Use the one below if your OS is Windows.
 
     ```bash
-    npm install your-package
+    pip install pygame 
     ```
-  </Step>
-  <Step>
-    /
-  </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
+
+    Use the one below if your OS is MacOS/Linux.
 
     ```bash
-    your-cli init
+    pip3 install pygame
     ```
-  </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
 
     ```bash
-    your-cli start
+    pip3 install pygame
     ```
+  </Step>
+  <Step title="Install NiceGUI">
+    NiceGUI is an essential library that I use often for my projects because it makes. Use the one below if your OS is Windows
+
+    ```bash
+    pip install nicegui
+    ```
+
+    Use the one below if your OS is MacOS/Linux
+
+    ```bash
+    pip3 install nicegui
+    ```
+  </Step>
+  <Step title="Verify NiceGUI is installed correctly">
+    1. Create a new file named `main.py` in your VS Code workspace.
+    2. Paste the following minimum working code:
+
+    ```bash
+    from nicegui import ui
+    
+    ui.label('Hello NiceGUI!')
+    
+    ui.run()
+    ```
+
+    3. Run the application from your terminal
+
+    ```bash
+    python main.py
+    ```
+
+    4. A browser window will automatically open up, or you can manually navigate to `http://localhost:8080` to see your running web app. NiceGUI features hot-reloading, so any changes you save in VS Code will update in the browser instantly.
+  </Step>
+  <Step title="Verify Pygame is installed correctly">
+    Create a new file named `test.py` and paste the following snippet to test if it works:
+
+    ```bash
+    import pygame
+    
+    # Initialize pygame
+    pygame.init()
+    
+    # Print confirmation
+    print("Pygame installed successfully!")
+    print(f"Version: {pygame.__version__}")
+    ```
+
+    Run the file. If you see the version number printed in the terminal without errors, your setup is complete.
   </Step>
 </Steps>
 
 <Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
-
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
+  Need help? Reach out to me at [support@pixelpath.com](ryan.z.jiao@gmail.com).
 </Tip>
