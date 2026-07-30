@@ -16,6 +16,13 @@
           "index",
           "quickstart"
         ]
+      },
+      "index",
+      {
+        "group": "Getting Started",
+        "pages": [
+          "quickstart"
+        ]
       }
     ],
     "global": {
