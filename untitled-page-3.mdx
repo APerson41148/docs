@@ -1,0 +1,49 @@
+---
+title: "Papercraft Current Code"
+---
+
+```bash
+import pygame
+import random
+import sys
+import math
+
+pygame.init()
+
+WIDTH, HEIGHT = 1440, 910
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
+pygame.display.set_caption("papercraft")
+CLOCK = pygame.time.Clock()
+FPS = 60
+
+world_x = 0
+world_y = 0
+
+gravity_const = 2.53
+
+floor = [0]
+
+def ground(world_x):
+    if world_x == math.floor(world_x):
+        return floor[world_x]
+    else:
+        if floor[math.floor(world_x)] < floor[math.ceil(world_x)]:
+            return floor[math.ceil(world_x)]
+        elif floor[math.ceil(world_x)] < floor[math.floor(world_x)]:
+            return floor[math.floor(world_x)]
+        else:
+            return floor[math.floor(world_x)]
+
+
+class player:
+    def __init__(self):
+        self.rect = pygame.Rect(0, 0, 101, 101)
+        self.dx = 2.53
+    def jump(self):
+        self.dx += 22.75
+    def update(self):
+        self.dx -= gravity_const
+        if 
+            self.rect.x += self.dx
+            self.rect.y += self.dy
+```

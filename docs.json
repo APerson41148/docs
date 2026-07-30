@@ -24,6 +24,25 @@
           "untitled-page-2-2",
           "untitled-page-2-2-2"
         ]
+      },
+      {
+        "group": "Current projects",
+        "pages": [
+          {
+            "group": "Papercraft",
+            "pages": [
+              "untitled-page-3",
+              "untitled-page-3-2"
+            ]
+          },
+          {
+            "group": "Quizzard",
+            "pages": [
+              "untitled-page-4",
+              "untitled-page-4-2"
+            ]
+          }
+        ]
       }
     ],
     "global": {

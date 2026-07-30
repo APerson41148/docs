@@ -1,0 +1,52 @@
+---
+title: "Quizzard Current Code"
+---
+
+```bash
+# -*- coding: utf-8 -*-
+import random
+from nicegui import ui
+
+display_num = 0
+
+question_set = [
+    ["how many toggles?","4","3","2","1"]
+    ["how many loaders?","4","3","2","1"]
+    ["How many goals in total?","9","8","6","10"]
+    ["what are the steps to the engineering process in order?","Identify the Challenge, Brainstorm, Choose Solution, Build, Test, Repeat","Choose Solution, Identify the Challenge, Test, Repeat, Build, Brainstorm,","Brainstorm, Choose Solution, Test, Repeat, Build, Identify the Challenge,","Identify the Challenge, Test, Repeat, Build, Brainstorm, Choose Solution,"]
+    ["what can you not modify","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+    ["how many toggles?","4","3","2","1"]
+]
+
+if display_num == 0:
+    # Add a header
+    ui.label('This is working on your computer!').classes('text-2xl font-bold text-blue-600')
+    
+    # Add a button
+    ui.button('Click Me To Begin', on_click= display_num += 1)
+
+if display_num in range(1)
+    # Add a notifier
+    ui.notify('You have started!')
+
+# Run the app
+ui.run()
+```
