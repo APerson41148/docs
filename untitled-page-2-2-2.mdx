@@ -1,0 +1,68 @@
+---
+title: "Missle Mania Code Breakdown"
+---
+
+The first part is just importing a bunch of libraries.
+
+```bash
+import pygame
+import random
+import sys
+import math
+```
+
+We initiate Pygame.
+
+```bash
+pygame.init()
+```
+
+We create the information for the window.
+
+```bash
+WIDTH, HEIGHT = 1440, 910
+SCREEN = pygame.display.set_mode((WIDTH, HEIGHT), pygame.FULLSCREEN)
+pygame.display.set_caption("Missle Mania")
+CLOCK = pygame.time.Clock()
+FPS = 60
+```
+
+We define all colors used in the game.
+
+```bash
+COLOR_BACKGROUND = (0, 0, 0)
+COLOR_PLAYER = (0, 255, 0)
+COLOR_ENEMY = (255, 0, 0)
+COLOR_ENEMY_BLUE = (0, 150, 255)
+COLOR_TEXT = (255, 255, 255)
+COLOR_MISSILE_OUTER = (0, 255, 255)
+COLOR_MISSILE_INNER = (255, 255, 0)
+```
+
+We have entity data defined here.
+
+```bash
+PLAYER_SIZE, ENEMY_SIZE, PLAYER_SPEED = 30, 30, 5
+ENEMY_SPEED_MIN, ENEMY_SPEED_MAX, NUM_ENEMIES = 3, 6, 5
+RADAR_BOX_SIZE = 160
+HEAT_SEEKING_COOLDOWN = 3000
+MINIGUN_FIRE_RATE = 80
+```
+
+We define the Player here.
+
+```bash
+class Player:
+    def __init__(self):
+        self.rect = pygame.Rect(WIDTH//2 - 15, HEIGHT//2 - 15, PLAYER_SIZE, PLAYER_SIZE)
+
+    def update(self, keys):
+        dx = (keys[pygame.K_d] - keys[pygame.K_a]) * PLAYER_SPEED
+        dy = (keys[pygame.K_s] - keys[pygame.K_w]) * PLAYER_SPEED
+        self.rect.x += dx
+        self.rect.y += dy
+        self.rect.clamp_ip(pygame.Rect(0, 0, WIDTH, HEIGHT))
+
+    def draw(self, surface):
+        pygame.draw.rect(surface, COLOR_PLAYER, self.rect)
+```
